@@ -1,0 +1,41 @@
+.collapse-container {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 100%;
+}
+.about-collapse {
+  width: 70%;
+  background-color: #ff6060;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.collapse-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #ff6060;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  
+}
+
+.collapse-button:focus {
+  outline: none;
+}
+
+.collapse-text {
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
+  padding: 10px;
+}

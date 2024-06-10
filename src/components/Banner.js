@@ -1,14 +1,22 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "../styles/banner.scss";
-import bannerBackground from "../assets/images/banner/banner.png";
 
-const Banner = () => {
+const Banner = ({ image, text }) => {
   return (
-    <section className="banner-image" style={{ backgroundImage: `url(${bannerBackground})`, backgroundSize: 'cover' }}>
-        <h1>Chez vous, partout et ailleurs</h1>
-        <div className="overlay"></div>
+    <section
+      className="banner-container"
+      style={{ backgroundImage: `url(${image})`, backgroundSize: "cover" }}
+    >
+      {text && <h1 className="banner__text">{text}</h1>}
+      <div className="overlay"></div>
     </section>
   );
+};
+
+Banner.propTypes = {
+  image: PropTypes.string.isRequired,
+  text: PropTypes.string,
 };
 
 export default Banner;

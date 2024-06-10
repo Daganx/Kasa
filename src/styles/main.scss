@@ -1,12 +1,13 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat';
-    text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  text-decoration: none;
+  list-style: none;
 }
 
 @font-face {
-    font-family: 'Montserrat'; 
-    src: url('../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
 }

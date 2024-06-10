@@ -7,10 +7,12 @@ const Header = () => {
   return (
     <header>
       <figure className="logo">
-        <img src={logo} alt="Logo of Kasa" />
+        <Link to="/">
+          <img src={logo} alt="Logo of Kasa" />
+        </Link>
       </figure>
       <nav className="nav-links">
-        <Link to="/home">Accueil</Link>
+        <Link to="/">Accueil</Link>
         <Link to="/about">A Propos</Link>
       </nav>
     </header>

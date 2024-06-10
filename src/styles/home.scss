@@ -1,0 +1,32 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  justify-items: center;
+  row-gap: 32px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-bottom: 32px;
+}
+
+.lodging-card {
+  width: 340px;
+  height: 340px;
+  position: relative;
+}
+
+.lodging-card__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.lodging-card__title {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  margin-left: 16px;
+  margin-bottom: 16px;
+  width: 140px;
+  font-size: 16px;
+}
