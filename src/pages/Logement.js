@@ -1,4 +1,3 @@
-// Logement.js
 import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import logements from "../data/logements.json";
@@ -41,8 +40,18 @@ const Logement = () => {
         <Rating rating={parseInt(lodging.rating, 10)} />
       </section>
       <section className="lodging-menu">
-        <Collapse title="Description" text={lodging.description} containerClass="logement-collapse" />
-        <Collapse title="Équipements" text={lodging.equipments.join(', ')} containerClass="logement-collapse" />
+        <Collapse
+          title="Description"
+          text={lodging.description}
+          containerClass="logement-collapse"
+        />
+        <Collapse
+          title="Équipements"
+          text={lodging.equipments.map((equipment, index) => (
+            <li key={index}>{equipment}</li>
+          ))}
+          containerClass="logement-collapse"
+        />
       </section>
     </section>
   );

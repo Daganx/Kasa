@@ -1,9 +1,8 @@
-// Collapse.js
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import '../styles/collapse.scss';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import "../styles/collapse.scss";
 
 const Collapse = ({ title, text, containerClass }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,11 +19,7 @@ const Collapse = ({ title, text, containerClass }) => {
       </button>
       {isOpen && (
         <div className="collapse-text">
-          {Array.isArray(text) ? (
-            text.map((item, index) => <p key={index}>{item}</p>)
-          ) : (
-            <p>{text}</p>
-          )}
+          <ul>{Array.isArray(text) ? text.map((item) => item) : text}</ul>
         </div>
       )}
     </div>

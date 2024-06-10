@@ -1,4 +1,3 @@
-// About.js
 import React from "react";
 import Banner from "../components/Banner";
 import BannerBackgroundAbout from "../assets/images/banner/bannerAbout.png";
@@ -12,7 +11,12 @@ const About = () => {
       <Banner image={BannerBackgroundAbout} />
       <section className="about-container">
         {collapseData.map((item, index) => (
-          <Collapse key={index} title={item.title} text={item.text} containerClass="about-collapse" />
+          <Collapse
+            key={index}
+            title={item.title}
+            text={item.text}
+            containerClass="about-collapse"
+          />
         ))}
       </section>
     </>

@@ -12,41 +12,38 @@ const Carousel = ({ pictures }) => {
 
   const previousSlide = () => {
     const lastIndex = pictures.length - 1;
-    const shouldResetIndex = currentIndex === 0;
-    const index = shouldResetIndex ? lastIndex : currentIndex - 1;
-    setCurrentIndex(index);
+    const newIndex = currentIndex === 0 ? lastIndex : currentIndex - 1;
+    setCurrentIndex(newIndex);
   };
 
   const nextSlide = () => {
     const lastIndex = pictures.length - 1;
-    const shouldResetIndex = currentIndex === lastIndex;
-    const index = shouldResetIndex ? 0 : currentIndex + 1;
-    setCurrentIndex(index);
+    const newIndex = currentIndex === lastIndex ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
   };
 
   return (
     <figure className="carousel">
-      {currentIndex > 0 && (
-        <button
-          className="carousel__button carousel__button--left"
-          onClick={previousSlide}
-        >
-          <FontAwesomeIcon icon={faChevronLeft} />
-        </button>
-      )}
+      <button
+        className="carousel__button carousel__button--left"
+        onClick={previousSlide}
+      >
+        <FontAwesomeIcon icon={faChevronLeft} />
+      </button>
       <img
         src={pictures[currentIndex]}
         alt={`Slide ${currentIndex + 1}`}
         className="carousel__image"
       />
-      {currentIndex < pictures.length - 1 && (
-        <button
-          className="carousel__button carousel__button--right"
-          onClick={nextSlide}
-        >
-          <FontAwesomeIcon icon={faChevronRight} />
-        </button>
-      )}
+      <button
+        className="carousel__button carousel__button--right"
+        onClick={nextSlide}
+      >
+        <FontAwesomeIcon icon={faChevronRight} />
+      </button>
+      <figcaption className="carousel__counter">
+        {currentIndex + 1} / {pictures.length}
+      </figcaption>
     </figure>
   );
 };
