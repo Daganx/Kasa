@@ -17,3 +17,22 @@ nav a {
   color: black;
   font-size: 24px;
 }
+// MEDIA QUERIES 
+@media (max-width: 768px){
+  .logo a {
+    height: 100%;
+    display: flex;
+  }
+  header{
+    margin: 0 16px 0px 16px;
+  }
+  header > figure > a > img{
+    width: 100px;
+  }
+  nav{
+    gap: 20px;
+  }
+  nav a{
+    font-size: 18px;
+  }
+}

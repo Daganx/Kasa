@@ -3,8 +3,9 @@
   width: 100%;
   height: 100%;
 }
+
 .about-collapse {
-  width: 70%;
+  width: 75%;
   background-color: #ff6060;
 }
 
@@ -37,4 +38,21 @@
   overflow: hidden;
   transition: max-height 1s ease-in-out;
   padding: 10px;
+  color: white;
+}
+
+.collapse-text li {
+  color: black;
+}
+
+#root > main > section > section.lodging-menu > div:nth-child(1) > div > p {
+  color: black;
+}
+
+.rotate {
+  transition: transform 0.3s ease;
+}
+
+.rotate.open {
+  transform: rotate(180deg);
 }

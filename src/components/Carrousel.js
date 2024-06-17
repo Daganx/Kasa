@@ -24,26 +24,32 @@ const Carousel = ({ pictures }) => {
 
   return (
     <figure className="carousel">
-      <button
-        className="carousel__button carousel__button--left"
-        onClick={previousSlide}
-      >
-        <FontAwesomeIcon icon={faChevronLeft} />
-      </button>
+      {pictures.length > 1 && (
+        <button
+          className="carousel__button carousel__button--left"
+          onClick={previousSlide}
+        >
+          <FontAwesomeIcon icon={faChevronLeft} />
+        </button>
+      )}
       <img
         src={pictures[currentIndex]}
         alt={`Slide ${currentIndex + 1}`}
         className="carousel__image"
       />
-      <button
-        className="carousel__button carousel__button--right"
-        onClick={nextSlide}
-      >
-        <FontAwesomeIcon icon={faChevronRight} />
-      </button>
-      <figcaption className="carousel__counter">
-        {currentIndex + 1} / {pictures.length}
-      </figcaption>
+      {pictures.length > 1 && (
+        <button
+          className="carousel__button carousel__button--right"
+          onClick={nextSlide}
+        >
+          <FontAwesomeIcon icon={faChevronRight} />
+        </button>
+      )}
+      {pictures.length > 1 && (
+        <figcaption className="carousel__counter">
+          {currentIndex + 1} / {pictures.length}
+        </figcaption>
+      )}
     </figure>
   );
 };

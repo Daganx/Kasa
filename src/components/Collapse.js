@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "../styles/collapse.scss";
 
 const Collapse = ({ title, text, containerClass }) => {
@@ -15,11 +15,14 @@ const Collapse = ({ title, text, containerClass }) => {
     <div className={`collapse-container ${containerClass}`}>
       <button className="collapse-button" onClick={toggleCollapse}>
         <span>{title}</span>
-        <FontAwesomeIcon icon={isOpen ? faChevronUp : faChevronDown} />
+        <FontAwesomeIcon
+          icon={faChevronDown}
+          className={`rotate ${isOpen ? 'open' : ''}`}
+        />
       </button>
       {isOpen && (
         <div className="collapse-text">
-          <ul>{Array.isArray(text) ? text.map((item) => item) : text}</ul>
+          <p>{Array.isArray(text) ? text.map((item, index) => <span key={index}>{item}</span>) : text}</p>
         </div>
       )}
     </div>

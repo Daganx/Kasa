@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Navigate } from "react-router-dom";
 import logements from "../data/logements.json";
 import Carousel from "../components/Carrousel";
@@ -11,6 +11,19 @@ import "../styles/carrousel.scss";
 const Logement = () => {
   const { id } = useParams();
   const lodging = logements.find((logement) => logement.id === id);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   if (!lodging) {
     return <Navigate to="/notfound" />;
@@ -24,12 +37,15 @@ const Logement = () => {
           <h1>{lodging.title}</h1>
           <h2>{lodging.location}</h2>
         </section>
-        <section className="lodging-info">
-          <span>{lodging.host.name}</span>
-          <img src={lodging.host.picture} alt={lodging.host.name} />
-        </section>
+        {!isMobile && (
+          <section className="lodging-info">
+            <span className="host-name">{lodging.host.name}</span>
+            <img className="host-picture" src={lodging.host.picture} alt={lodging.host.name} />
+          </section>
+        )}
       </section>
       <section className="tags-and-rating">
+        
         <div className="tags">
           {lodging.tags.map((tag, index) => (
             <span key={index} className="lodging-tag">
@@ -38,6 +54,12 @@ const Logement = () => {
           ))}
         </div>
         <Rating rating={parseInt(lodging.rating, 10)} />
+        {isMobile && (
+          <section className="lodging-info">
+            <span className="host-name">{lodging.host.name}</span>
+            <img className="host-picture" src={lodging.host.picture} alt={lodging.host.name} />
+          </section>
+        )}
       </section>
       <section className="lodging-menu">
         <Collapse
