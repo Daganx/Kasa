@@ -72,33 +72,33 @@
   gap: 32px;
 }
 
-@media (max-width: 768px){
-  .logement-container{
-    margin-left: 32px;
-    margin-right: 32px;
+@media (max-width: 768px) {
+  .logement-container {
+    margin-left: 16px;
+    margin-right: 16px;
   }
-  .tags-and-rating{
+  .tags-and-rating {
     flex-direction: column;
     position: relative;
   }
-  .tags{
+  .tags {
     padding-bottom: 16px;
   }
-  .lodging-menu{
+  .lodging-menu {
     flex-direction: column;
   }
-  .lodging-info{
+  .lodging-info {
     justify-content: flex-end;
     align-items: center;
   }
-  .lodging-details h1{
+  .lodging-details h1 {
     font-size: 24px;
   }
-  .lodging-info span{
+  .lodging-info span {
     font-size: 14px;
     width: min-content;
   }
-  .lodging-info img{
+  .lodging-info img {
     height: 32px;
     width: 32px;
   }

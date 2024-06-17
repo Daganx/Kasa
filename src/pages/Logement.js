@@ -40,12 +40,15 @@ const Logement = () => {
         {!isMobile && (
           <section className="lodging-info">
             <span className="host-name">{lodging.host.name}</span>
-            <img className="host-picture" src={lodging.host.picture} alt={lodging.host.name} />
+            <img
+              className="host-picture"
+              src={lodging.host.picture}
+              alt={lodging.host.name}
+            />
           </section>
         )}
       </section>
       <section className="tags-and-rating">
-        
         <div className="tags">
           {lodging.tags.map((tag, index) => (
             <span key={index} className="lodging-tag">
@@ -57,7 +60,11 @@ const Logement = () => {
         {isMobile && (
           <section className="lodging-info">
             <span className="host-name">{lodging.host.name}</span>
-            <img className="host-picture" src={lodging.host.picture} alt={lodging.host.name} />
+            <img
+              className="host-picture"
+              src={lodging.host.picture}
+              alt={lodging.host.name}
+            />
           </section>
         )}
       </section>

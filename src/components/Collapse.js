@@ -17,12 +17,16 @@ const Collapse = ({ title, text, containerClass }) => {
         <span>{title}</span>
         <FontAwesomeIcon
           icon={faChevronDown}
-          className={`rotate ${isOpen ? 'open' : ''}`}
+          className={`rotate ${isOpen ? "open" : ""}`}
         />
       </button>
       {isOpen && (
         <div className="collapse-text">
-          <p>{Array.isArray(text) ? text.map((item, index) => <span key={index}>{item}</span>) : text}</p>
+          <p>
+            {Array.isArray(text)
+              ? text.map((item, index) => <span key={index}>{item}</span>)
+              : text}
+          </p>
         </div>
       )}
     </div>

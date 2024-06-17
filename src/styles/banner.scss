@@ -28,8 +28,8 @@
   border-radius: 25px;
 }
 
-@media (max-width: 880px){
-  .banner-container{
+@media (max-width: 880px) {
+  .banner-container {
     height: 111px;
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@
     margin-left: 16px;
     margin-right: 16px;
   }
-  .banner-container h1{
+  .banner-container h1 {
     text-align: left;
     margin-left: 16px;
     font-size: 24px;
