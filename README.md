@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Application Kasa
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Kasa** est une application web permettant aux utilisateurs de consulter et réserver des logements. Ce projet est réalisé dans le cadre du parcours de développeur d'applications front-end chez OpenClassrooms. L'objectif est d'appliquer les concepts de **React** en créant une interface dynamique et responsive pour la gestion de locations.
 
-## Available Scripts
+## Table des Matières
 
-In the project directory, you can run:
+- [Aperçu](#aperçu)
+- [Fonctionnalités](#fonctionnalités)
+- [Technologies Utilisées](#technologies-utilisées)
+- [Installation et Lancement du Projet](#installation-et-lancement-du-projet)
+- [Structure du Projet](#structure-du-projet)
+- [Auteurs](#auteurs)
+- [Licence](#licence)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Aperçu
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Kasa** est une plateforme de location de logements où les utilisateurs peuvent consulter des annonces et accéder aux détails de chaque logement. Ce projet simule une expérience utilisateur complète, incluant la navigation entre les logements, l'affichage de descriptions détaillées et l'interface utilisateur optimisée pour différents écrans.
 
-### `npm test`
+## Fonctionnalités
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Page d'accueil** : Affichage de toutes les annonces de logements disponibles avec une brève description.
+- **Détail des logements** : Page dédiée pour chaque logement, incluant une galerie d'images, une description, les équipements et les avis des utilisateurs.
+- **Carrousel d'images** : Pour visualiser les photos des logements de manière interactive.
+- **Responsive Design** : Adapté aux mobiles, tablettes et ordinateurs.
+- **Page d'À propos** : Présentation de Kasa avec les valeurs et l’engagement de l’entreprise.
+- **Gestion des erreurs** : Affichage d'une page 404 pour les routes inexistantes.
 
-### `npm run build`
+## Technologies Utilisées
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React** : Pour la création de l’interface utilisateur.
+- **React Router** : Pour la navigation entre les pages.
+- **CSS Modules** : Pour un style localisé et évitant les conflits de classes.
+- **Vite** : Pour la configuration du projet et un développement plus rapide.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation et Lancement du Projet
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prérequis
 
-### `npm run eject`
+- **Node.js** (version 16 ou supérieure)
+- **npm** ou **yarn**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Cloner le dépôt**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   git clone https://github.com/daganx/kasa.git
+   cd kasa
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Installer les dépendances**
 
-## Learn More
+    ```bash
+   npm install
+   # ou 
+   yarn install
+    ```
+3. **Lancer le projet en mode développement**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```bash
+   npm run dev
+   #ou 
+   yarn dev
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Auteurs
+Ce projet a été réalisé dans le cadre du parcours de développeur d'applications front-end chez OpenClassrooms.

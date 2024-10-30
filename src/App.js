@@ -4,9 +4,9 @@ import Home from "../src/pages/Home";
 import About from "../src/pages/About";
 import Logement from "../src/pages/Logement";
 import NotFound from "../src/pages/NotFound";
-import "./styles/main.scss";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import "./styles/main.scss";
 
 function App() {
   return (
